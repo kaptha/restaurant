@@ -1,11 +1,12 @@
 import Nav from 'react-bootstrap/Nav';
+import "../pages/css/barra.css";
 
-export default function Inicio(){
+export default function Barra(){
     return (
         <>
-        <Nav className="justify-content-center" activeKey="/home">
+        <Nav className="justify-content-center barranav" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Inicio</Nav.Link>
+          <Nav.Link  href="/home">Inicio</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="link-1">Nosotros</Nav.Link>
@@ -18,7 +19,7 @@ export default function Inicio(){
             Blog
           </Nav.Link>
         </Nav.Item>
-      </Nav>
+      </Nav>      
         </>
     )
 }

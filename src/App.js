@@ -1,13 +1,15 @@
-import Inicio from './components/barra';
-import Carrusel from './components/header';
+import Barra from './components/barra';
+import Inicio from './components/inicio';
+import Footer from './components/footer';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Barra/>
       <Inicio/>
-      <Carrusel/>
-    </div>
+      <Footer/>
+    </>
   );
 }
 
