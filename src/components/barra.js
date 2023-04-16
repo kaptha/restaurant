@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
-import "../pages/css/barra.css";
+//CSS
+import "../pages/css/barra.module.css";
 
 export default function Barra(){
     return (

@@ -2,18 +2,27 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-import "../pages/css/inicio.css";
+import Button from 'react-bootstrap/Button';
+//Imagenes
+import slideuno from "../images/cerveza.jpg";
+import slidedos from "../images/carne1.jpg";
+import slidetres from "../images/carne2.jpg";
+import cerv from "../images/barril.png";
+import carn from "../images/meat.png";
+import nosotros from "../images/nos.jpg";
+import servs from "../images/servs.jpg";
+//CSS
+import stilos from "../pages/css/inicio.module.css";
 
 export default function Inicio() {
   return (
     <>
-    <Container className="slide">      
+    <Container >      
         <Carousel fade>
       <Carousel.Item>
         <img
           className="d-block w-100 h-100"
-          src="../images/carne1.jpg"
+          src={slidedos}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -24,7 +33,7 @@ export default function Inicio() {
       <Carousel.Item>
         <img
           className="d-block w-100 h-100"
-          src="../images/cerveza.jpg"
+          src={slideuno}
           alt="Second slide"
         />
 
@@ -36,7 +45,7 @@ export default function Inicio() {
       <Carousel.Item>
         <img
           className="d-block w-100 h-100"
-          src="../images/carne2.jpg"
+          src={slidetres}
           alt="Third slide"
         />
 
@@ -49,12 +58,11 @@ export default function Inicio() {
       </Carousel.Item>
     </Carousel>     
     </Container>
-    <Container className="presentacion">    
-    <Row>
+    <Container>    
+    <Row> 
       <Col>
       <div>
-        <img src="../images/cerv1.jpg">
-        </img>
+        <img className={stilos.icopre} src={cerv}/>        
       </div>
       Cerveza Artesanal
       </Col>
@@ -63,8 +71,7 @@ export default function Inicio() {
       </Col>
       <Col>
       <div>
-        <img src="../images/carn1.jpg">
-        </img>
+        <img  className={stilos.icopre} src={carn}/>        
       </div>
       Cortes Finos
       </Col>
@@ -72,19 +79,25 @@ export default function Inicio() {
   </Container>
   <Container>
       <Row>
-        <Col>Nosotros</Col>
-        <Col>Descripcion</Col>
+        <Col><img className={stilos.us} src={nosotros}/></Col>
+        <Col>nosotros
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets </p>
+        </Col>
       </Row>      
     </Container>
     <Container>
       <Row>
-        <Col>Descripcion</Col>
-        <Col>Servicios</Col>
+        <Col>Servicios
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
+        </Col>
+        <Col><img className={stilos.us} src={servs}/></Col>
       </Row>      
     </Container>
     <Container>
       <Row>
-        <Col>Haz una reservacion</Col>        
+        <Col>Haz una reservacion
+        <Button className={stilos.redondo} variant="outline-primary">Agendar</Button>
+        </Col>        
       </Row>      
     </Container>
     <Container>
