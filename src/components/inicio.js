@@ -19,7 +19,7 @@ import stilos from "../pages/css/inicio.module.css";
 export default function Inicio() {
   return (
     <>
-    <Container >      
+    <Container fluid>      
         <Carousel fade>
       <Carousel.Item>
         <img
@@ -60,7 +60,7 @@ export default function Inicio() {
       </Carousel.Item>
     </Carousel>     
     </Container>
-    <Container className={stilos.segundoblok}>    
+    <Container fluid className={stilos.segundoblok}>    
     <Row> 
       <Col className="align-self-center">
       <div>
@@ -81,7 +81,7 @@ export default function Inicio() {
       </Col>
     </Row>
   </Container>
-  <Container>
+  <Container fluid>
       <Row>
         <Col><img className={stilos.us} src={nosotros}/></Col>
         <Col>nosotros
@@ -89,7 +89,7 @@ export default function Inicio() {
         </Col>
       </Row>      
     </Container>
-    <Container>
+    <Container fluid>
       <Row>
         <Col>Servicios
         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
@@ -97,14 +97,14 @@ export default function Inicio() {
         <Col><img className={stilos.us} src={servs}/></Col>
       </Row>      
     </Container>
-    <Container className="d-flex justify-content-around">
+    <Container fluid className="d-flex justify-content-around">
       <Row>
         <Col>Haz una reservacion
         <Button className={stilos.redondo} variant="outline-primary">Agendar</Button>
         </Col>        
       </Row>      
     </Container>
-    <Container>
+    <Container fluid>
       <Row>
         <Col>Ubicanos</Col>
         <Col>Mapa</Col>

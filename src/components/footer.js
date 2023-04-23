@@ -12,7 +12,7 @@ import styles from "../pages/css/footer.module.css";
 
 export default function Footer() {
   return (
-    <Container className={styles.foot}>     
+    <Container fluid className={styles.foot}>     
       <Row>
         <Col><img className={styles.log} src={logo}></img></Col>
         <Col>Ligas        

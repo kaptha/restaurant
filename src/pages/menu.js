@@ -1,8 +1,11 @@
+import { Container } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 
 function Menu() {
   return (
-    <Table striped bordered hover variant="dark">
+    <>
+    <Container fluid>
+      <Table striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>#</th>
@@ -30,7 +33,10 @@ function Menu() {
           <td>@twitter</td>
         </tr>
       </tbody>
-    </Table>
+      </Table>
+    </Container>
+    </>
+    
   );
 }
 

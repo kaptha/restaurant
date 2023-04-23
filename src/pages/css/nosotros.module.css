@@ -1,0 +1,10 @@
+.imgbck{
+    width: auto;
+    height: 550px;
+    background-image: url("../../images/about.jpg");    
+}
+.imgbck2{
+    width: 80px;
+    height: 80px;
+    background-image: url("../../images/about-bg.jpg");
+}
