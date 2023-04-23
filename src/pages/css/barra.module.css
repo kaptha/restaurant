@@ -1,4 +1,8 @@
 .barranav{
-    background-color: rgb(190, 179, 179);
+    background-color: rgb(177, 162, 162);
     opacity: .2;    
+}
+.logo{
+    height: 70px;
+    width: 70px;    
 }

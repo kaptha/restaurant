@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+
 //Imagenes
 import slideuno from "../images/cerveza.jpg";
 import slidedos from "../images/carne1.jpg";
@@ -13,6 +14,7 @@ import nosotros from "../images/nos.jpg";
 import servs from "../images/servs.jpg";
 //CSS
 import stilos from "../pages/css/inicio.module.css";
+
 
 export default function Inicio() {
   return (
@@ -26,7 +28,7 @@ export default function Inicio() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <h3>Cortes Finos</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -38,7 +40,7 @@ export default function Inicio() {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+          <h3>Cervezas Artesanales</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -50,7 +52,7 @@ export default function Inicio() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Cortes Premium</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
@@ -58,9 +60,9 @@ export default function Inicio() {
       </Carousel.Item>
     </Carousel>     
     </Container>
-    <Container>    
+    <Container className={stilos.segundoblok}>    
     <Row> 
-      <Col>
+      <Col className="align-self-center">
       <div>
         <img className={stilos.icopre} src={cerv}/>        
       </div>
@@ -68,8 +70,10 @@ export default function Inicio() {
       </Col>
       <Col>
       Que hacemos
+      <h5>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y 
+        los mezcló de tal manera que logró hacer un libro de textos especimen. </h5>
       </Col>
-      <Col>
+      <Col className="align-self-center">
       <div>
         <img  className={stilos.icopre} src={carn}/>        
       </div>
@@ -93,7 +97,7 @@ export default function Inicio() {
         <Col><img className={stilos.us} src={servs}/></Col>
       </Row>      
     </Container>
-    <Container>
+    <Container className="d-flex justify-content-around">
       <Row>
         <Col>Haz una reservacion
         <Button className={stilos.redondo} variant="outline-primary">Agendar</Button>

@@ -6,14 +6,15 @@ import fb from "../images/facebook.png";
 import twi from "../images/twiter.png";
 import ins from "../images/instagram.png";
 import tkt from "../images/tik-tok.png";
+import logo from "../images/c&c.png"
 //CSS
-import "../pages/css/footer.module.css";
+import styles from "../pages/css/footer.module.css";
 
 export default function Footer() {
   return (
-    <Container className="foot">     
+    <Container className={styles.foot}>     
       <Row>
-        <Col>Logo</Col>
+        <Col><img className={styles.log} src={logo}></img></Col>
         <Col>Ligas        
         <ul>
           <li>Inicio</li>
@@ -30,19 +31,13 @@ export default function Footer() {
           <li>Blog</li>
         </ul>
         </Col>
-        <Col>Pedidos
-        <ul>
-          <li>Rappi</li>
-          <li>Didi food</li>
-          <li>Uber eats</li>          
-        </ul>
-        </Col>
-        <Col>Siguenos
-        <ul>
-          <li><img src={fb}/></li>
-          <li><img src={twi}/></li>
-          <li><img src={ins}/></li>
-          <li><img src={tkt}/></li>
+        
+        <Col >Siguenos
+        <ul className="d-flex justify-content-between">
+          <li><img className={styles.minlog} src={fb}/></li>
+          <li><img className={styles.minlog} src={twi}/></li>
+          <li><img className={styles.minlog} src={ins}/></li>
+          <li><img className={styles.minlog} src={tkt}/></li>
         </ul>
         </Col>
       </Row>
