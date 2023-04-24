@@ -17,16 +17,20 @@ const initialState = {
   Correo: ""
 };
 const Reservar=()=> {
-  const [name, value] = useState(initialState);
-
+  const [values, setValues] = useState(initialState);
+  
   const handleInputChange = (e) => {
     const {name, value} = e.target;
-    setValue({...value,[name]:value});
+    //console.log(name,'-', value);
+    setValues({...values,[name]:value});    
     }
-    const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e) => {
       e.preventDefault();
-  console.log(values)
-  };
+      await saveReservacion(values);      
+      setValues(initialState);
+      //console.log(values);
+    };
   return (
 
     <>
@@ -35,17 +39,17 @@ const Reservar=()=> {
       <Row className={spr.separacion}>
       <Col md className={spr.sprinput}>
       <FloatingLabel controlId="floatingInputGrid" label="Nombre">
-          <Form.Control type="text" placeholder="Nombre" onChange={handleInputChange}/>
+          <Form.Control type="text" name="Nombre" placeholder="Nombre" onChange={handleInputChange}/>
         </FloatingLabel>
       </Col>
       <Col md className={spr.sprinput}>
         <FloatingLabel controlId="floatingInputGrid" label="Correo">
-          <Form.Control type="email" placeholder="name@example.com" onChange={handleInputChange}/>
+          <Form.Control type="email" name="Correo" placeholder="name@example.com" onChange={handleInputChange}/>
         </FloatingLabel>
       </Col>
       <Col md className={spr.sprinput}>
         <FloatingLabel controlId="floatingInputGrid" label="Evento">
-          <Form.Control type="text" placeholder="Tipo de evento" onChange={handleInputChange}/>
+          <Form.Control type="text" name="Evento" placeholder="Tipo de evento" onChange={handleInputChange}/>
         </FloatingLabel>
       </Col>
       
@@ -53,21 +57,21 @@ const Reservar=()=> {
     <Row className={spr.separacion}>
       <Col md className={spr.sprinput}>      
         <FloatingLabel controlId="floatingInputGrid" label="Fecha">
-          <Form.Control type="date" placeholder="Fecha del evento" onChange={handleInputChange}/>
+          <Form.Control type="date" name="Fecha" placeholder="Fecha del evento" onChange={handleInputChange}/>
         </FloatingLabel>
       </Col> 
       <Col md className={spr.sprinput}>      
         <FloatingLabel controlId="floatingInputGrid" label="Hora">
-          <Form.Control type="time" placeholder="Hora del evento" onChange={handleInputChange}/>
+          <Form.Control type="time" name="Hora" placeholder="Hora del evento" onChange={handleInputChange}/>
         </FloatingLabel>
       </Col>  
       <Col md className={spr.sprinput}>
         <FloatingLabel controlId="floatingInputGrid" label="Numero de personas">
-          <Form.Control type="number" placeholder="Numero de personas" onChange={handleInputChange}/>
+          <Form.Control type="number" name="Personas" placeholder="Numero de personas" onChange={handleInputChange}/>
         </FloatingLabel>
       </Col>  
     </Row>
-    <Button className={spr.sprinput} variant="outline-primary">Reservar</Button>
+    <Button className={spr.sprinput} variant="outline-primary" type="submit">Reservar</Button>
     </Container>
     </form>
     

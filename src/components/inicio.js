@@ -96,20 +96,7 @@ export default function Inicio() {
         </Col>
         <Col><img className={stilos.us} src={servs}/></Col>
       </Row>      
-    </Container>
-    <Container fluid className="d-flex justify-content-around">
-      <Row>
-        <Col>Haz una reservacion
-        <Button className={stilos.redondo} variant="outline-primary">Agendar</Button>
-        </Col>        
-      </Row>      
-    </Container>
-    <Container fluid>
-      <Row>
-        <Col>Ubicanos</Col>
-        <Col>Mapa</Col>
-      </Row>      
-    </Container>
+    </Container>    
     </>
     
     
